@@ -1,4 +1,4 @@
-## Word Counter and Ranking Program
+## Word Counter and Ranking Program ##
 
 ## About:
 This program efficiently counts the no. of words based on each character's skill, before ranking them in descending order.
