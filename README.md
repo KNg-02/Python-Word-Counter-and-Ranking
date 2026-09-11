@@ -1,11 +1,11 @@
 <h1 align="center">Word Counter and Ranking Program</h1>
 
 ## About:
-This program efficiently counts the no. of words based on each character's skill, before ranking them in descending order.
+This program efficiently counts the no. of words based on each subject's description, before ranking them in descending order.
 
 Data for the above is stored in a .csv to effectively store large amounts of info.
-Each character has their own set of categories with one value of each, (Class, Rarity and Position and Year), allowing the user to filter said characters through their sub-categories, and/or also learn the individual word counts for the latter.
-At the beginning, you may filter characters through said categories, or simply display all data.
+Each subject has their own set of categories with one value of each, (Class, Rarity and Position and Year), allowing the user to filter said subjects through their sub-categories, and/or also learn the individual word counts for the latter.
+At the beginning, you may filter subjects through said categories, or simply display all data.
 
 ## Requirements
 **Pandas library**: Handling of .csv
@@ -16,18 +16,18 @@ At the beginning, you may filter characters through said categories, or simply d
 *Note: When prompted to, you will constantly be asked to provide correct input, so if it's invalid, you will be able to re-input such without needing to re-run the program.*
 
 In the beginning, select between three options by their respective number:
-* `1`: Count words from all characters, filtered by categories (Class/Rarity/Position/Year) via input later
-* `2`: Count words from all characters, ignoring categorical filters
+* `1`: Count words from all subjects, filtered by categories (Class/Rarity/Position/Year) via input later
+* `2`: Count words from all subjects, ignoring categorical filters
 * `3`: End program
 
-Should `2` be sent, word counts from all characters and categories will immediately be provided and the program will end.
+Should `2` be sent, word counts from all subjects and categories will immediately be provided and the program will end.
 
 ### Category Filtering
 Should `1` be sent, you will have the option to select between the four categories to filter with.
 
-* Only characters that are part of the given categories, followed by their subsequent sub-categories will appear. For example, with input as `Rarity` followed by `Epic`, only characters that fall under the `Epic` sub-category will appear in our final result.
+* Only subjects that are part of the given categories, followed by their subsequent sub-categories will appear. For example, with input as `Rarity` followed by `Epic`, only subjects that fall under the `Epic` sub-category will appear in our final result.
 
-* However, should two categories be present, for example, with `Rarity` as `Epic` and `Year` by `2021`, only characters that are `Epic` **and** `2021` will appear. Think of it as `if rarity == "Epic" and year == 2021`.
+* However, should two categories be present, for example, with `Rarity` as `Epic` and `Year` by `2021`, only subjects that are `Epic` **and** `2021` will appear. Think of it as `if rarity == "Epic" and year == 2021`.
 
 It'll take too long to specify every possible interaction, so **think of it as playing around with column filters in Excel.**. Alternatively, jump to the "How category filtering works" section for a more in-depth explanation.
 
@@ -43,12 +43,12 @@ Input Notes:
 * Inputs are not case-sensitive, so `Rarity` or `rarity` will work fine.
 * Unintentional duplicates (`Rarity Rarity`) will be auto-removed for you.
 
-So, if you just want to filter characters by *Rarity*, specify:
+So, if you just want to filter subjects by *Rarity*, specify:
 ```
 Rarity
 ```
 
-If you want to filter characters by *Rarity* and *Year*, specify:
+If you want to filter subjects by *Rarity* and *Year*, specify:
 ```
 Rarity Year
 ```
@@ -118,7 +118,7 @@ In *Class*, we input *Magic*, *Healing*, *Ranged* and *Ambush* as its subcategor
 
 As a result, we will get:
 
-As shown below, we only get characters under the 4 mentioned subclasses.
+As shown below, we only get subjects under the 4 mentioned subclasses.
 
 | Name  |Class|Position|Rarity|Year|
 | ------------- | ------------- | ------------- | ------------- | ------------- |
@@ -153,11 +153,11 @@ As shown in the above example, this program uses **the specified categories' ord
 
 There will be three parts of the results: *General Stats*, *Bonus Stats* and *Summary*.
 
-**General Stats**: Display all (filtered, if applicable) characters by name, amount of words, and descending ranking by said amount.
+**General Stats**: Display all (filtered, if applicable) subjects by name, amount of words, and descending ranking by said amount.
 
 Example:
 
-| Character Stats  |
+| subject Stats  |
 | ------------- |
 | Burning Spice: 265 words, #1 |
 | Mystic Flour: 246 words: #2 |
@@ -196,7 +196,7 @@ Example:
 
 etc.
 
-**Summary**: Just displays the total amount of words counted from all characters.
+**Summary**: Just displays the total amount of words counted from all subjects.
 
 
 
